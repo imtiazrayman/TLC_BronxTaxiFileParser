@@ -97,10 +97,7 @@ int main(void)
     printf("\nIDs Entered : %s to %s\nPick-up ID Entered : %s\nDropOff Id Entered : %s\nNumber Of Pickups at %s to %s : %d trips.\n", argv[1] , argv[2], argv[1] , argv[2], argv[1], argv[2] ,total);
     }
     return 0;
-
-  
 }
-
 /* if (field_count == 0) {
                 printf("VendorID:\t");
             }
