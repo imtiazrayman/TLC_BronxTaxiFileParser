@@ -66,55 +66,13 @@ int main(void)
 
             //printf("%d" , total);
             printf("\n<<<<<<Output>>>>>>\nIDs Entered : %s to %s\nPick-up ID Entered : %s\nDropOff Id Entered : %s\nNumber Of Pickups at %s to %s : %d trips.\n", argv[1] , argv[2], argv[1] , argv[2], argv[1], argv[2] ,total);
-            /*
-            FILE *fp = fopen(argv[0], "r"); 
-            if (!fp) { // fp would be false if is not found
-                printf("Can't open file\n");
-                
-                return 1;
-            }
-            if(fp)
-            { // fp would be true if file was found 
 
-              while (fgets(buf, 1024, fp)) 
-              {
-                  field_count = 0;
-                  row_count++;
-
-                  if (row_count == 1) { // skip the headers get to the data we need
-                      continue; 
-                  }
-                  field = strtok(buf, ",");
-
-                  while (field) {
-                     if (field_count == 7) 
-                     { 
-                          if(strcmp(field, argv[1]) == 0)
-                          {
-                              pickupcount++;
-                              field = strtok(NULL, ",");
-                              field_count++;
-                              if (field_count == 8 ) // field count 8 is the Pick up location Id :
-                              { 
-                                if(strcmp(field, argv[2]) == 0)
-                                {
-                                  total++;
-                                }
-                              }
-                          }
-                     }
-                      field = strtok(NULL, ",");
-                      field_count++;
-                  }
-              }
-              fclose(fp);*/
             exit(0);
           }
           else {
 
             wait(NULL);
 
-           // printf("\nIDs Entered : %s to %s\nPick-up ID Entered : %s\nDropOff Id Entered : %s\nNumber Of Pickups at %s to %s : %d trips.\n", argv[1] , argv[2], argv[1] , argv[2], argv[1], argv[2] ,total);
           }
         }
       else 

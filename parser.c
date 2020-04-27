@@ -20,6 +20,7 @@ int main(void)
       bool dropoff = false;
 
     // yellow_tripdata_2019-12.csv pickup_id dropoff_id 200
+    // yellow_tripdata_2019-12.csv 200 123
 
     while(1){
      printf("\n<<<<<<<<<<<<File Parser>>>>>>>>>>>>\nSingle processes (Single Thread) Version #1\n");
@@ -28,7 +29,8 @@ int main(void)
      fgets(buffer, 1000, stdin);
         int i = 0; 
 
-        for (myWord = strtok(buffer, space); myWord; myWord = strtok(NULL, space)) {
+        for (myWord = strtok(buffer, space); myWord; myWord = strtok(NULL, space)) 
+        {
           argv[i] = myWord;
           i++;
         }
@@ -43,6 +45,7 @@ int main(void)
     int dropoffcount = 0;  
     int returnvalue = 0;
     int total = 0; 
+    
     if(strcmp(argv[0],"Exit") == 0){ 
       printf("Exit has been Entered, Program Exiting...\n"); 
       break; 
@@ -92,12 +95,19 @@ int main(void)
                 }
             }
             fclose(fp);
-    
     }
     printf("\nIDs Entered : %s to %s\nPick-up ID Entered : %s\nDropOff Id Entered : %s\nNumber Of Pickups at %s to %s : %d trips.\n", argv[1] , argv[2], argv[1] , argv[2], argv[1], argv[2] ,total);
     }
     return 0;
 }
+
+
+
+
+
+
+
+
 /* if (field_count == 0) {
                 printf("VendorID:\t");
             }
