@@ -32,7 +32,7 @@ int main(void)
        printf("Program must be invoked in the sequence of:\nfileName.csv pickup_id dropoff_id\n");
        printf("Enter <Exit> or <CTRL + C> TO QUIT\nExample: yellow_tripdata_2019-12.csv 161 237\nEnter >"); 
        
-       fgets(buffer, 1000, stdin)
+       fgets(buffer, 1000, stdin);
           int i = 0; 
 
           for (myWord = strtok(buffer, space); myWord; myWord = strtok(NULL, space)) 
